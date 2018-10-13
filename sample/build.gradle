@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    defaultConfig {
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        applicationId "com.bartoszlipinski.disableanimationsrule.sample"
+        versionCode versions.versionCode.toInteger()
+        versionName versions.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+}
+dependencies {
+    implementation "com.android.support:appcompat-v7:${versions.appcompat}"
+
+    androidTestImplementation project(':library')
+    androidTestImplementation "junit:junit:${versions.junit}"
+    androidTestImplementation 'com.bartoszlipinski:cortado:1.2.0'
+    androidTestImplementation "com.android.support.test:rules:${versions.rules}"
+    androidTestImplementation "com.android.support.test:runner:${versions.runner}"
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+}

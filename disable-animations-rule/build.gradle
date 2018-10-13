@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    defaultConfig {
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versions.versionCode.toInteger()
+        versionName versions.versionName
+    }
+}
+
+dependencies {
+    implementation "junit:junit:${versions.junit}"
+    implementation "com.android.support.test:rules:${versions.rules}"
+    implementation "com.android.support.test:runner:${versions.runner}"
+    implementation "com.android.support.test.uiautomator:uiautomator-v18:${versions.uiautomator}"
+}
+
+apply from: rootProject.file('gradle/upload_to_bintray.gradle')

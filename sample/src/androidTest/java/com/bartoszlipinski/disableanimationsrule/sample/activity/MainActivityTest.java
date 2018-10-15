@@ -23,7 +23,7 @@ public class MainActivityTest {
     public DisableAnimationsRule animationsRule = new DisableAnimationsRule();
 
     @Test
-    public void thisWillNotWorkWithAnimations() {
+    public void thisTestWill_NOT_workWithAnimations() {
         onTextView().withText("sample").check().matches(isDisplayed());
         onButton().withText("Animate").perform().click();
         onTextView().withText("something different").check().matches(isDisplayed());

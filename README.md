@@ -13,8 +13,8 @@ Usage
  1. Add to your test:
 
      ```java
-     @Rule
-     public DisableAnimationsRule animationsRule = new DisableAnimationsRule();
+     @ClassRule
+     public static DisableAnimationsRule animationsRule = new DisableAnimationsRule();
      ```
 
  2. Enjoy **animation-free** Android integration tests

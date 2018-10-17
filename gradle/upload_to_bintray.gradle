@@ -27,7 +27,7 @@ bintray {
     key = bintrayKey
 
     configurations = ['archives']
-    publish = false
+    publish = true // local mode within the bitrise
 
     pkg {
         repo = BINTRAY_REPO
@@ -50,6 +50,7 @@ install {
         pom {
             project {
                 packaging POM_PACKAGING
+                artifactId POM_ARTIFACT_ID
                 name POM_ARTIFACT_ID
                 url POM_URL
                 licenses {

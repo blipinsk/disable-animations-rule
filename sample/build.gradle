@@ -12,10 +12,17 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 }
+
+repositories {
+    maven { url 'https://dl.bintray.com/blipinsk/maven' }
+}
+
 dependencies {
     implementation "com.android.support:appcompat-v7:${versions.appcompat}"
 
-    androidTestImplementation project(':library')
+
+    androidTestImplementation 'com.bartoszlipinski:disable-animations-rule:1.0.0'
+//    androidTestImplementation project(':library')
     androidTestImplementation "junit:junit:${versions.junit}"
     androidTestImplementation 'com.bartoszlipinski:cortado:1.2.0'
     androidTestImplementation "com.android.support.test:rules:${versions.rules}"

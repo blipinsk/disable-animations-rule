@@ -11,9 +11,8 @@ android {
 }
 
 dependencies {
-    implementation "junit:junit:${versions.junit}"
-    implementation "com.android.support.test:rules:${versions.rules}"
-    implementation "com.android.support.test:runner:${versions.runner}"
+    compileOnly "junit:junit:${versions.junit}"
+    compileOnly "com.android.support.test:runner:${versions.runner}"
     implementation "com.android.support.test.uiautomator:uiautomator-v18:${versions.uiautomator}"
 }
 

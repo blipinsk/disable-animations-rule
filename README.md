@@ -4,7 +4,7 @@ disable-animations-rule
 
 ---
 
-Read more here: [One @Rule to disable them all](https://medium.com/@blipinsk/)
+Read more here: [One @Rule to disable them all](https://medium.com/p/d387da440318/)
 
 Usage
 =====
@@ -31,6 +31,12 @@ dependencies {
     androidTestImplementation 'com.bartoszlipinski:disable-animations-rule:1.0.0'
 }
 ```
+
+Compatibility
+-------------
+This library uses UiAutomator which means it will work correctly only if you perform instrumented tests on devices with Android API 18+.
+
+Although this is the case, you can still use this testing library in projects with minSdk>=14. This has been done on purpose, so that you can easily include it in your project without the need for adding a custom AndroidManifest.xml to your test environment (more on that in the [post](https://medium.com/p/d387da440318/)).
 
 Developed by
 ============

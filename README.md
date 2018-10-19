@@ -17,7 +17,7 @@ Usage
      public static DisableAnimationsRule animationsRule = new DisableAnimationsRule();
      ```
 
- 2. Enjoy **animation-free** Android integration tests
+ 2. Enjoy **animation-free** Android instrumented tests
 
 Including In Your Project
 -------------------------

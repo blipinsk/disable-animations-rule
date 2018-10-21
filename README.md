@@ -34,11 +34,11 @@ dependencies {
 
 Compatibility
 -------------
-This library uses UiAutomator which means it will work correctly only if you perform instrumented tests on devices with Android API 18+.
+This library uses UiAutomator which means it will work correctly only if you perform instrumented tests on devices with Android API 18+. Apart from that executing shell commands is supported by API 21+.
 
 Although this is the case, you can still add this testing library in projects with minSdk>=14. This has been done on purpose, so that you can easily include it in your project without the need for adding a custom AndroidManifest.xml to your test environment (more on that in the [post](https://medium.com/p/d387da440318/)).
 
-Bare in mind that it **does not** mean that it will work on devices `<14;18)`. Testing device must still be 18+. It's just so you can easily add it to the project.
+Bare in mind that it **does not** mean that it will work on devices `<14;18)`. Testing device must still be 21+. It's just so you can easily add it to the project.
 
 Developed by
 ============

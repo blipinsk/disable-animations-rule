@@ -12,7 +12,7 @@ ext {
             uiautomator      : '2.2.0',
     ]
 
-    bintrayUser = BINTRAY_USERNAME
-    bintrayKey = BINTRAY_API_KEY
+    bintrayUser = project.findProperty('BINTRAY_USERNAME') ?: ''
+    bintrayKey = project.findProperty('BINTRAY_API_KEY') ?: ''
 
 }

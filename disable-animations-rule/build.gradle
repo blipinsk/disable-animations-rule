@@ -12,8 +12,8 @@ android {
 
 dependencies {
     compileOnly "junit:junit:${versions.junit}"
-    compileOnly "com.android.support.test:runner:${versions.runner}"
-    implementation "com.android.support.test.uiautomator:uiautomator-v18:${versions.uiautomator}"
+    compileOnly "androidx.test:runner:${versions.runner}"
+    implementation "androidx.test.uiautomator:uiautomator:${versions.uiautomator}"
 }
 
 apply from: rootProject.file('gradle/upload_to_bintray.gradle')

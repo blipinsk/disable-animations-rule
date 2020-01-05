@@ -15,8 +15,10 @@
  */
 package com.bartoszlipinski.disableanimationsrule;
 
-import android.support.test.InstrumentationRegistry;
-import android.support.test.uiautomator.UiDevice;
+import android.app.UiAutomation;
+
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.uiautomator.UiDevice;
 
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;

@@ -9,7 +9,7 @@ android {
         versionCode versions.versionCode.toInteger()
         versionName versions.versionName
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 }
 
@@ -18,16 +18,13 @@ repositories {
 }
 
 dependencies {
-    implementation "com.android.support:appcompat-v7:${versions.appcompat}"
+    implementation "androidx.appcompat:appcompat:${versions.appcompat}"
 
+//    androidTestImplementation 'com.bartoszlipinski:disable-animations-rule:1.0.0'
+    androidTestImplementation project(':library')
 
-    androidTestImplementation 'com.bartoszlipinski:disable-animations-rule:1.0.0'
-//    androidTestImplementation project(':library')
     androidTestImplementation "junit:junit:${versions.junit}"
-    androidTestImplementation 'com.bartoszlipinski:cortado:1.2.0'
-    androidTestImplementation "com.android.support.test:rules:${versions.rules}"
-    androidTestImplementation "com.android.support.test:runner:${versions.runner}"
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    }
+    androidTestImplementation "androidx.test:rules:${versions.rules}"
+    androidTestImplementation "androidx.test:runner:${versions.runner}"
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }

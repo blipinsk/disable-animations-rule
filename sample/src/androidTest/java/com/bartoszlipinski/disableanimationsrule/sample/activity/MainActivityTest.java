@@ -1,7 +1,7 @@
 package com.bartoszlipinski.disableanimationsrule.sample.activity;
 
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.rule.ActivityTestRule;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.bartoszlipinski.disableanimationsrule.DisableAnimationsRule;
 
@@ -9,9 +9,11 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static cortado.Cortado.onButton;
-import static cortado.Cortado.onTextView;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
@@ -24,8 +26,8 @@ public class MainActivityTest {
 
     @Test
     public void thisTestWill_NOT_workWithAnimations() {
-        onTextView().withText("sample").check().matches(isDisplayed());
-        onButton().withText("Animate").perform().click();
-        onTextView().withText("something different").check().matches(isDisplayed());
+        onView(withText("sample")).check(matches(isDisplayed()));
+        onView(withText("Animate")).perform(click());
+        onView(withText("something different")).check(matches(isDisplayed()));
     }
 }

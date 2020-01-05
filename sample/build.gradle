@@ -20,7 +20,7 @@ repositories {
 dependencies {
     implementation "androidx.appcompat:appcompat:${versions.appcompat}"
 
-//    androidTestImplementation 'com.bartoszlipinski:disable-animations-rule:1.0.0'
+//    androidTestImplementation 'com.bartoszlipinski:disable-animations-rule:2.0.0'
     androidTestImplementation project(':library')
 
     androidTestImplementation "junit:junit:${versions.junit}"

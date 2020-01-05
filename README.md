@@ -1,5 +1,8 @@
 disable-animations-rule
 ===============
+[ ![bintray](https://img.shields.io/bintray/v/blipinsk/maven/disable-animations-rule?color=success&label=bintray) ](https://bintray.com/blipinsk/maven/disable-animations-rule/_latestVersion)
+[ ![maven-central](https://img.shields.io/maven-central/v/com.bartoszlipinski/disable-animations-rule?label=maven-central) ](https://search.maven.org/search?q=g:com.bartoszlipinski%20AND%20a:disable-animations-rule)
+
 **JUnit TestRule for Android instrumented tests, which automatically disables and enables animations**
 
 ---
@@ -28,7 +31,7 @@ repositories {
 }
 
 dependencies {
-    androidTestImplementation 'com.bartoszlipinski:disable-animations-rule:1.0.0'
+    androidTestImplementation 'com.bartoszlipinski:disable-animations-rule:2.0.0'
 }
 ```
 

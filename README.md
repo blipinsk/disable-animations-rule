@@ -1,5 +1,5 @@
-disable-animations-rule
-===============
+![Image](/img/2200x660.png)
+
 [ ![bintray](https://img.shields.io/bintray/v/blipinsk/maven/disable-animations-rule?color=success&label=bintray) ](https://bintray.com/blipinsk/maven/disable-animations-rule/_latestVersion)
 [ ![maven-central](https://img.shields.io/maven-central/v/com.bartoszlipinski/disable-animations-rule?label=maven-central) ](https://search.maven.org/search?q=g:com.bartoszlipinski%20AND%20a:disable-animations-rule)
 
